@@ -22,7 +22,7 @@ echo tagging("head");
 echo tagging("/head");
 echo tagging("body");
 
-echo "BEGIN TESTING FACTORY, DECORATOR, AND STRATEGY METHOD PATTERN";
+echo "BEGIN TESTING FACTORY, DECORATOR, AND SINGLETON METHOD PATTERN";
 echo tagging("br").tagging("br");
 
 echo 'testing PersonFactoryMethod'.tagging("br");
@@ -31,7 +31,7 @@ $factoryInstance = new PersonFactoryMethod;
 TestFactory($factoryInstance);
 
 echo tagging("br");
-echo "END TESTING [Design Pattern 1], [Design Pattern 2], AND [Design Pattern 3] METHOD PATTERN";
+echo "END TESTING FACTORY, DECORATOR, AND SINGLETON METHOD PATTERN";
 echo tagging("br"). tagging("br");
 
 echo tagging("/body");
