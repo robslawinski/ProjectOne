@@ -16,19 +16,23 @@ class StudentPerson extends AbstractStudent
 	private $major;
 	private  $LName;
 	private $gpa;
-	private $peopleSingleton = null;
 
-	function __construct() {
+	function __construct() 
+	{
 		$this->FName = 'Max';
 		$this->LName  = 'Rothakanski';
 		$this->major = 'Mechanical Engineering';
 		$this->gpa = 3.7;
-		$peopleSingleton = new peopleSingleton();
+		PeopleSingleton::attendClass();
 	}
 	function getFName() {return $this->FName;}
 	function getLName() {return $this->LName;}
 	function getMajor() {return $this->major;}
 	function getGPA() {return $this->gpa;}
-	function getAttendance() {return $this->peopleSingleton->getAttendance;}
+	function getAttendance() 
+	{
+		$temp = PeopleSingleton::getAttendanceStr();
+		return $temp;
+	}
 }
 ?>

@@ -6,6 +6,7 @@
  * @due date: 11/7/16
  */
 include_once('AbstractStudentAthlete.php');
+include_once('PeopleSingleton.php');
 //
 //Student Athlete Person Object
 //
@@ -16,7 +17,7 @@ class StudentAthletePerson extends AbstractStudentAthlete {
 	private $major;
 	private $gpa;
 	private $sport;
-	private $peopleSingleton = null;
+	
 	
 	function __construct() {
 		$this->FName = 'Robert';
@@ -24,7 +25,7 @@ class StudentAthletePerson extends AbstractStudentAthlete {
 		$this->major  = 'Web & Information Systems';
 		$this->gpa  = 3.0;
 		$this->sport  = 'Fencing';
-		$peopleSingleton = new peopleSingleton();
+		PeopleSingleton::attendClass();
 		
 	}
 	function getFName() {return $this->FName;}
@@ -32,7 +33,12 @@ class StudentAthletePerson extends AbstractStudentAthlete {
 	function getMajor() {return $this->major;}
 	function getGPA()	{return $this->gpa;}
 	function getSport()	{return $this->sport;}
-	function getAttendance() {return $this->peopleSingleton->getAttendance;}
+	function getAttendance()
+	{
+		$temp = PeopleSingleton::getAttendanceStr();
+		return $temp;
+	
+	}
 	
 	
 }

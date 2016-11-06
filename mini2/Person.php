@@ -13,19 +13,19 @@ include_once ('PeopleSingleton.php');
 class Person extends AbstractPerson {
 
 	private $fname;
-	private $peopleSingleton;
 	private $lname;
 
 	function __construct() {
 		echo 'Person debug 1 <br>';
-		$peopleSingleton = PeopleSingleton::attendClass();
+		PeopleSingleton::attendClass();
 		echo 'Person debug 2 <br>';
 		$this->fname = 'Jane';
 		$this->lname  = 'Doe';
 	}
 	function getFName() {return $this->fname;}
 	function getLName() {return $this->lname;}
-	function getAttendance() {
+	function getAttendance()
+	{
 		echo 'Person:getAttendance debug 1 <br>';
 		$temp = PeopleSingleton::getAttendanceStr();
 		return $temp;

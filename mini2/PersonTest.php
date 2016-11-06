@@ -58,7 +58,7 @@ function TestFactory($factoryMethodInstance)
 	
 	echo 'People Present: ' . $test->getAttendance() . tagging("br");
 	
-/*	$test = $factoryMethodInstance->makePerson("student");
+	$test = $factoryMethodInstance->makePerson("student");
 	echo 'First Name: ' .
 			$test -> getFName(). tagging("br");
 	echo 'Last Name: ' .
@@ -67,13 +67,15 @@ function TestFactory($factoryMethodInstance)
 			$test -> getMajor().tagging("br");
 	echo 'GPA: ' . 
 			$test -> getGPA(). tagging("br");
+	
+	
 	//
 	// Decorated Student Object
 	//
 	$decorator = new StudentPersonDecorator($test);
 	echo 'Decorated Name: ' . $decorator->showPerson() . tagging("br"). tagging("br");
 	
-	//echo 'People Present: ' . $test->getAttendance() . tagging("br");
+	echo 'People Present: ' . $test->getAttendance() . tagging("br");
 
 	
 	$test = $factoryMethodInstance->makePerson("athlete");
@@ -94,8 +96,8 @@ function TestFactory($factoryMethodInstance)
 	$decorator = new StudentAthletePersonDecorator($test);
 	echo 'Decorated Name: ' . $decorator->showPerson($test) . tagging("br") . tagging("br");
 	
-//	echo 'People Present: ' . $test->getAttendance() . tagging("br");
-	*/
+	echo 'People Present: ' . $test->getAttendance() . tagging("br");
+	
 }
 
 //
